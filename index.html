@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WeatherNow</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+ 
+  <div class="bg-blobs">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+  </div>
+ 
+  <div class="container">
+    <header>
+      <h1 class="logo">⛅ WeatherNow</h1>
+      <p class="tagline">Real-time weather, anywhere on Earth</p>
+    </header>
+ 
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Enter city name..." autocomplete="off"/>
+      <button id="searchBtn">Search</button>
+    </div>
+ 
+    <div id="errorMsg" class="error hidden">City not found. Please try again.</div>
+ 
+    <div id="weatherCard" class="weather-card hidden">
+      <div class="card-top">
+        <div class="city-info">
+          <h2 id="cityName">—</h2>
+          <p id="countryDate">—</p>
+        </div>
+        <img id="weatherIcon" src="" alt="weather icon"/>
+      </div>
+ 
+      <div class="temp-section">
+        <span id="temperature" class="temp">—</span>
+        <span class="unit">°C</span>
+      </div>
+ 
+      <p id="description" class="description">—</p>
+ 
+      <div class="stats-grid">
+        <div class="stat">
+          <span class="stat-label">Feels Like</span>
+          <span id="feelsLike" class="stat-value">—</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Humidity</span>
+          <span id="humidity" class="stat-value">—</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Wind Speed</span>
+          <span id="windSpeed" class="stat-value">—</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Visibility</span>
+          <span id="visibility" class="stat-value">—</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Pressure</span>
+          <span id="pressure" class="stat-value">—</span>
+        </div>
+        <div class="stat">
+          <span class="stat-label">Cloudiness</span>
+          <span id="cloudiness" class="stat-value">—</span>
+        </div>
+      </div>
+    </div>
+ 
+    <div id="loader" class="loader hidden">
+      <div class="spinner"></div>
+      <p>Fetching weather...</p>
+    </div>
+ 
+    <footer>
+      <p>Powered by <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap API</a></p>
+    </footer>
+  </div>
+ 
+  <script src="script.js"></script>
+</body>
+</html>
+ 
